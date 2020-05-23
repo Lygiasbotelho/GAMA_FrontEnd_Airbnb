@@ -26,7 +26,7 @@ fetch(API_URL)//XMLHttpRequest(API_URI)
       // Boa! Agora, precisamos criar a "div" do card a ser exibido. Ao criar, atribua a class "card mb-4 box-shadow".
       card = document.createElement("div");//?
       card.className = "card mb-4 box-shadow";
-      div.appendChild(card);/**/ 
+
 
       // Humm... Agora que já temos o card, que tal começarmos a popular as informações?
       // Crie um elemento "img" e, atribua a class como "card-img-top";
@@ -34,43 +34,40 @@ fetch(API_URL)//XMLHttpRequest(API_URI)
       image = document.createElement("img");/**/
       image.className = "card-img-top";
       image.src = photo;//image.referencia = minhaImagem;
-      card.appendChild(image);
+
 
       // Legal! Agora, já podemos começar a construir o "corpo" do card. Bora lá!
       // Obs.: atribua a class "card-body" do Bootstrap, para que fique bonitão. :)
       cardBody = document.createElement("div"); //cardBody = ?
       cardBody.className = "cardy-body";//cart.text = 
-      card.appendChild(cardBody);
 
       // Beleza, corpo criado. Seguindo nossa estrutura, o próximo elemento seria os textos, para exibir
       // o tipo da propriedade, nome e preço. Mas, antes, vamos criar um elemento "div" para manter isso
       // tudo organizado. Você pode atribuir a class "card-text" do Bootstrap!
       cardText = document.createElement("div");//cardText = ?
       cardText.className = "card-text";
-      cardBody.appendChild(cardText);
+
 
 
       // Uffa! Finalmente os elementos da proriedade!
       // Precisamos agora, listar o tipo, o nome e o preço.
       propertyType = document.createElement("p");//propertyType = criaParagrafo("p");
-      propertyType.className = "property-type";      
+      propertyType.className = "property-type";
       propertyType.innerHTML = property_type;//propertyType.innerHTML = element;
 
 
       propertyName = document.createElement("p");//propertyName = ?
-      propertyName.className = "property-name"; 
+      propertyName.className = "property-name";
       propertyName.innerHTML = name;
-      
-      
+
+
       propertyPrice = document.createElement("p");
-      propertyPrice.className = "property-price"; 
+      propertyPrice.className = "property-price";
       propertyPrice.innerHTML = `Total de R$ ${price.toFixed(2)}`;//propertyPrice = ?
 
-      cardText.appendChild(propertyType);
-      cardText.appendChild(propertyName);
-      cardText.appendChild(propertyPrice);
 
-      
+
+
 
       // AOBA! Temos agora, todos os elementos necessários para percorrer a resposta da API e,
       // anexar um ao outro para exibição ao usuário. Para "anexar" os elementos, nós usaremos
@@ -88,6 +85,14 @@ fetch(API_URL)//XMLHttpRequest(API_URI)
       //           propertyPrice
 
       row.appendChild(div);
+      div.appendChild(card);
+      card.appendChild(image);
+      card.appendChild(cardBody);
+      cardBody.appendChild(cardText);
+      cardText.appendChild(propertyType);
+      cardText.appendChild(propertyName);
+      cardText.appendChild(propertyPrice);
+
       // [ ... ]
     });
   });

@@ -1,0 +1,58 @@
+.card{
+  /*border: 1px solid red;*/
+  height: 340px;
+}
+.card-body {
+  height: 150px;
+  max-height: 150px;
+}
+
+.property-type {
+  color: #a52903;
+  font-weight: bold;
+  padding:10px 20px 0;
+}
+
+.property-name {
+  color: #484848;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 0;
+  padding:0 20px 5px;
+}
+
+.property-price {
+  color: #484848;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  margin-top: 5px;
+  padding:0 20px 10px;
+/*  border: 1px solid red;*/
+}
+
+img {
+  max-height: 200px;
+}
+.rodape{
+  background-color: #343A40;
+  height:100%;
+  /*text-align: center;*/
+  padding: 10px 8%;
+}
+.rodape p{
+  margin-bottom: 0;
+}
+.topo{
+  text-align: right;
+}
+.rodape a{
+  text-decoration: none;
+  color: #FAFAFA;
+}
+.rodape a:hover{
+  text-decoration: none;
+  color: #A4A4A4;
+}
